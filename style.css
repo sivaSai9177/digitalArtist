@@ -97,11 +97,18 @@ body .container header nav .main ul li a {
   text-transform: uppercase;
 }
 
+body .container header nav .main ul li a.active {
+  background-image: linear-gradient(225deg, #a431a1, #e84348 51%, #fbb031);
+  font-weight: bold;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
 body .container header nav .main ul li a::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -2px;
+  bottom: -4px;
   width: 100%;
   height: 1.5px;
   background-color: #fff;
@@ -188,8 +195,8 @@ body .container header nav .social .menu .ripple.overlay {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: -37%;
-  left: -39%;
+  top: -40%;
+  left: -40%;
   right: 0;
   bottom: 0;
   border-radius: 50%;
@@ -317,6 +324,13 @@ body .container main .content .button {
           justify-content: center;
 }
 
+body .container main .content .button:hover .wrap .span {
+  background-color: #ff9009;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
 body .container main .content .button:hover {
   cursor: pointer;
 }
@@ -337,7 +351,7 @@ body .container main .content .button .wrap {
           box-sizing: border-box;
 }
 
-body .container main .content .button .wrap span {
+body .container main .content .button .wrap .span {
   background-color: #ffa02c;
   padding: 16.5px 13px;
   border-radius: 99px 0px 0px 99px;
