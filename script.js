@@ -4,7 +4,7 @@ var placeholder = document.querySelectorAll('.dist');
 var delayContainer = document.querySelectorAll('.anime2');
 var place = document.querySelectorAll('.place');
 var menu = document.querySelector('.menu');
-var overlay = document.querySelector('.overlay');
+var ripple = document.querySelector('.ripple');
 
 
 
@@ -16,8 +16,7 @@ var hamburgerMenu = document.querySelector('.hamburger-menu');
 var animationPage = document.querySelector('.animation-page');
 
 menu.addEventListener('click', function () {
-    overlay.classList.toggle('animation');
-    console.log(overlay);
+    ripple.classList.add('overlay');
     hamburgerMenu.classList.toggle('animate');
     animationPage.classList.toggle('reverse');
     leftContainer.classList.toggle('anime');
@@ -31,5 +30,21 @@ menu.addEventListener('click', function () {
             holder.style.transition = 'opacity 0.3 s 0.2 s ease';
         })
     }
+    setTimeout(() => {
+        ripple.classList.remove('overlay');
+    },500)
 });
+
+
+document.body.addEventListener('wheel', (event) => {
+    var wheel = document.querySelector('.wheel-master');
+    if (event.deltaY > 1) {
+        console.log(event.deltaY);
+        wheel.style.top = 0 +'%';
+    } else {
+        console.log(event.deltaY);
+        wheel.style.top = 100 + '%';
+    }
+});
+
 
