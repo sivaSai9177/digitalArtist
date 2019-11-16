@@ -46,5 +46,16 @@ document.body.addEventListener('wheel', (event) => {
         wheel.style.top = 100 + '%';
     }
 });
+var navLinks = document.querySelectorAll('.nav-links');
+
+navLinks.forEach((link) => {
+    link.addEventListener('click', pageNavigation, false);
+});
+
+function pageNavigation(e) {
+    var currentActive = document.querySelector('.active');
+    currentActive.classList.remove('active');
+    e.target.classList.add('active');
+}
 
 
