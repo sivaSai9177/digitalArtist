@@ -18,30 +18,15 @@ $btn-border:#b61943;
     align-items: center;
     justify-content: center;
 }
-// .hamburger-menu,
-// .hamburger-menu:after,
-// .hamburger-menu:before {
-//     width: $bar-width;
-//     height: $bar-height;
-// }
-// .hamburger-menu.animate:after {
-//     top: 0;
-//     transform: rotate(65deg);
-//     transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
-//     ;
-// }
-
-// .hamburger-menu.animate:before {
-//     bottom: 50px;
-//     transform: rotate(-65deg);
-//     transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
-//     ;
-// }
 
 * {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -o-user-select:none;
+    user-select:none;
 }
 svg{
     height: 100%;
@@ -64,8 +49,7 @@ body {
             top: 0;
             z-index: 999;
             nav {
-                min-width: 90%;
-                max-width: 1442px;
+                max-width: 90%;
                 height: 100%;
                 margin: 0 auto;
                 display: flex;
@@ -275,7 +259,10 @@ body {
         }
 
         main {
+            min-width: 1280px;
+            max-width: 1440px;
             height: 100%;
+            margin:0 auto;
             display: flex;
             align-items: center;
             justify-content: space-around;
@@ -373,6 +360,7 @@ body {
         top:0;
         display: flex;
         transition: all 0.2s ease;
+        z-index: 99;
         &.reverse{
             left: 0;
             // display: flex;
@@ -431,7 +419,7 @@ body {
                     width:60px;
                     height: 60px;
                     border-radius: 50%;
-                    background-color: #961b3c;
+                    background-color: #ccc;
                     @include flexRow();
                     img{
                         height: 22px;
@@ -481,14 +469,14 @@ body {
         width: 200px;
         height: 20px;
         border-radius: 10px;
-        background-color: #660d27;
+        background-color: #ccc;
         margin-bottom: 8px;
     }
 
     .same {
         height: 6px;
         border-radius: 10px;
-        background-color: #660d27;
+        background-color: #ccc;
     }
 
     .medium {
@@ -576,18 +564,3 @@ section{
         
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
