@@ -2,6 +2,11 @@
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
 }
 
 svg {
@@ -31,8 +36,7 @@ body .container header {
 }
 
 body .container header nav {
-  min-width: 90%;
-  max-width: 1442px;
+  max-width: 90%;
   height: 100%;
   margin: 0 auto;
   display: -webkit-box;
@@ -284,7 +288,10 @@ body .container header nav .social .menu .menu-wrapper .hamburger-menu.animate:b
 }
 
 body .container main {
+  min-width: 1280px;
+  max-width: 1440px;
   height: 100%;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -409,6 +416,7 @@ body .animation-page {
   display: flex;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
+  z-index: 99;
 }
 
 body .animation-page.reverse {
@@ -495,7 +503,7 @@ body .animation-page .left .placeholder .icon {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-color: #961b3c;
+  background-color: #ccc;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -556,14 +564,14 @@ body .animation-page .right .place:nth-child(3).anime2 {
   width: 200px;
   height: 20px;
   border-radius: 10px;
-  background-color: #660d27;
+  background-color: #ccc;
   margin-bottom: 8px;
 }
 
 .place .same {
   height: 6px;
   border-radius: 10px;
-  background-color: #660d27;
+  background-color: #ccc;
 }
 
 .place .medium {
